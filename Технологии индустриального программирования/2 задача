@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int v;
+    int t;
+    int s;
+    
+    cin >> v;
+    cin >> t;
+    s = (v * t) % 109;
+    
+    cout << s << std::endl;
+                            
+    return 0;
+}

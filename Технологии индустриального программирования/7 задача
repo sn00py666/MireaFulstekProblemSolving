@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int h;
+    int a;
+    int b;
+    int c;
+    int d;
+    
+    cin >> h;
+    cin >> a;
+    cin >> b;
+    
+    c = 0;
+    d = 0;
+
+    while (c < h){
+        d ++;
+        c = c + a;
+        if (c >= h){
+            break;
+        }
+        c = c - b;
+    }
+    
+    cout << d;
+                            
+    return 0;
+}
