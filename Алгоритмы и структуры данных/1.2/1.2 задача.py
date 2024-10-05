@@ -12,10 +12,9 @@ def gor(list):
             else: left = mid + 1
         if mid == 0: return "Не горный"
         elif mid == len(list)-1: return "Не горный"
-        return mid
+        return left
 
 print(gor([1,2,3,4,5,6]))
 print(gor([6,5,4,3,2,1]))
 print(gor([2,2,2,2,2,2]))
 print(gor([1,2,3,4,2,1]))
-
