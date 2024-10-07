@@ -12,11 +12,14 @@ def eretosfen(n):
         else: break
     return arr
 
+
 def ferma(n):
     n = n
     m = int(n**0.5)
-    x = 0
+    x = 1
     q = (m + x)**2 - n 
+    if n ** 0.5 == int(n ** 0.5):
+        return [int(n ** 0.5), int(n ** 0.5)]
     
     while q ** 0.5 != int(q ** 0.5):
         x += 1
@@ -24,7 +27,6 @@ def ferma(n):
     p1 = int(q**0.5 + (x + m))
     p2 = int((m + x) - q**0.5)
     itog = [p1,p2]
-    
     if p1 not in eretosfen(p1):
         for i in list(ferma(p1)):
             itog.append(i)
@@ -32,10 +34,19 @@ def ferma(n):
     if p2 not in list(eretosfen(p2)):
         for i in ferma(p2):
             itog.append(i)
-        itog.remove(p2)
-        
+        itog.remove(p2)  
     return itog
 
-print(ferma(19691))
-# print(ferma(1275))
-# print(ferma(25))
+
+def format_ferma(n):
+    if n % 2 == 0:
+        return "нет"
+    itog = ferma(n)
+    set_itog = sorted(set(itog))
+    res = []
+    for i in set_itog:
+        res.append(f"{i} ** {itog.count(i)}")
+    return " * ".join(res)
+
+
+print(format_ferma(1275))
