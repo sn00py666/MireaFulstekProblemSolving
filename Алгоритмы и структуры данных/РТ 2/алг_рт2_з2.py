@@ -17,7 +17,7 @@ def razlozh(a):
     itog = []
     b = 18
     if a in eretosfen(a):
-        return f"{a} ** 1"
+        return f"{a} ^ 1"
     else:
         for i in range(2, int(a ** 0.5) + 1):
             if a % i == 0 and (i in eretosfen(i)):
@@ -26,7 +26,7 @@ def razlozh(a):
                 while b % i == 0:
                     c += 1
                     b = b // i
-                itog.append(f"{i} ** {c}")
+                itog.append(f"{i} ^ {c}")
 
                 i = a // i
                 if a % i == 0 and (i in eretosfen(i)):
@@ -35,7 +35,7 @@ def razlozh(a):
                     while b % i == 0:
                         c += 1
                         b = b // i
-                    itog.append(f"{i} ** {c}")
+                    itog.append(f"{i} ^ {c}")
 
     return " * ".join(itog)
 
