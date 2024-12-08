@@ -54,6 +54,7 @@ def format_ferma(n):
 
 
 print(format_ferma(1275))
-print(format_ferma(2047))
+print(format_ferma(405))
 print(format_ferma(17))
-print(format_ferma(81))
+print(format_ferma(10))
+

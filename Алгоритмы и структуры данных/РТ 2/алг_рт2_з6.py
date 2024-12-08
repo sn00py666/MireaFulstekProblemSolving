@@ -19,5 +19,4 @@ print(sundaram(int(input())))
 
 
 
-
     

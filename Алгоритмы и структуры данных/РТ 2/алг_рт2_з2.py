@@ -15,7 +15,6 @@ def eretosfen(n):
 
 def razlozh(a):
     itog = []
-    b = 18
     if a in eretosfen(a):
         return f"{a} ^ 1"
     else:
