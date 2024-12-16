@@ -27,14 +27,15 @@ def insertion_sort_wint_binary(arr):
 # if __name__ == "__main__":
 #     print(insertion_sort_wint_binary([4,3,2,1]))
 
-arr = random.sample(random(1, 10 ** 5), 10 ** 4)
+arr = random.sample(range(1, 10 ** 5), 10 ** 4)
 
-time_small_insertion_start = time.time()
-
-time_big_bubble_start = time.time()
+time_insertion_start = time.time()
 insertion_sort(arr.copy())
-time_big_insertion = time.time() - time_small_insertion_start
+time_insertion = time.time() - time_insertion_start
 
-time_big_bubble_start = time.time()
+print(time_insertion)
+
+time_insertion_binary_start = time.time()
 insertion_sort_wint_binary(arr.copy())
-time_big_insertion = time.time() - time_small_insertion_start
+time_insertion_binary = time.time() - time_insertion_binary_start
+print(time_insertion_binary)
